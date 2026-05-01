@@ -297,6 +297,27 @@ st.markdown("""
         border: 1px solid rgba(139,92,246,0.2) !important;
         border-radius: 10px !important;
     }
+    /* ── DATAFRAME / TABEL GELAP ── */
+    [data-testid="stDataFrame"] > div,
+    [data-testid="stDataFrame"] iframe,
+    .stDataFrame > div {
+        background-color: #1a1235 !important;
+        border: 1px solid rgba(139,92,246,0.2) !important;
+        border-radius: 10px !important;
+    }
+    [data-testid="stDataFrame"] th {
+        background-color: #0f0b20 !important;
+        color: #a78bfa !important;
+        border-color: rgba(139,92,246,0.2) !important;
+    }
+    [data-testid="stDataFrame"] td {
+        background-color: #1a1235 !important;
+        color: #ffffff !important;
+        border-color: rgba(139,92,246,0.15) !important;
+    }
+    [data-testid="stDataFrame"] tr:hover td {
+        background-color: rgba(139,92,246,0.12) !important;
+    }
 </style>
 """, unsafe_allow_html=True)
 
