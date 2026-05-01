@@ -477,6 +477,20 @@ def csv_stats(df_res):
 # PAGE SECTIONS
 # ==========================================
 
+def dark_table(df):
+    html = "<table style='width:100%;border-collapse:collapse;border-radius:10px;overflow:hidden;'>"
+    html += "<tr>" + "".join(
+        f"<th style='background:#0f0b20;color:#a78bfa;padding:10px 14px;text-align:left;border-bottom:1px solid rgba(139,92,246,0.3);'>{col}</th>"
+        for col in df.columns
+    ) + "</tr>"
+    for _, row in df.iterrows():
+        html += "<tr>" + "".join(
+            f"<td style='background:#1a1235;color:#ffffff;padding:9px 14px;border-bottom:1px solid rgba(139,92,246,0.12);'>{val}</td>"
+            for val in row
+        ) + "</tr>"
+    html += "</table>"
+    st.markdown(html, unsafe_allow_html=True)
+    
 def render_header(accuracy, total_data, model_ok, best_params):
     st.markdown("""
     <div class="grad-header">
