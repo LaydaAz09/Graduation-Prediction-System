@@ -831,8 +831,7 @@ def page_hasil_csv():
             return 'background-color:rgba(79,172,254,0.15);color:#93c5fd;font-weight:600'
         return ''
 
-   st.dataframe(df_display.style.map(style_kat, subset=['Kategori']),
-                 use_container_width=True, hide_index=True, height=420)
+   st.dataframe(df_display, use_container_width=True, hide_index=True, height=420)
 
     st.markdown("---")
     st.markdown("### 📊 Ringkasan Statistik")
