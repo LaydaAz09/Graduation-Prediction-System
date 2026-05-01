@@ -606,7 +606,7 @@ def page_hasil_personal():
                 ("Status Pekerjaan", r['status']), ("Umur", f"{r['umur']} tahun"),
                 ("IPK", f"{ipk:.2f}")] + \
                [(f"IPS Semester {i+1}", f"{v:.2f}") for i, v in enumerate(r['ips_vals'])]
-        dark_table(pd.DataFrame(stats, columns=["Metrik","Nilai"]))
+        dark_table(pd.DataFrame(rows, columns=["Variabel","Nilai"]))
     
 
 def page_analisis_personal(model, model_ok):
@@ -767,8 +767,7 @@ def page_visualisasi_personal():
         ("Konsistensi (SD)", f"{ips_std:.2f}", "🎯 Stabil" if ips_std<0.3 else ("📊 Cukup" if ips_std<0.5 else "⚠️ Fluktuatif")),
         ("Confidence", f"{conf:.1f}%", "✅ Tinggi" if conf>=80 else ("📊 Sedang" if conf>=60 else "⚠️ Rendah")),
     ]
-    st.dataframe(pd.DataFrame(summary, columns=["Aspek","Nilai","Status"]),
-                 use_container_width=True, hide_index=True)
+    dark_table(pd.DataFrame(summary, columns=["Aspek","Nilai","Status"]))
 
 
 def page_upload_csv(model, scaler, le_prodi, le_gender, le_status, model_ok):
@@ -807,7 +806,7 @@ def page_upload_csv(model, scaler, le_prodi, le_gender, le_status, model_ok):
             else:
                 st.success(f"✅ Dataset berhasil dimuat: **{len(df_up)} mahasiswa**")
                 with st.expander("👁️ Preview Data"):
-                    st.dataframe(df_up.head(), use_container_width=True)
+                    dark_table(df_up.head())
 
                 if st.button("🔮 ANALISIS SEMUA MAHASISWA", use_container_width=True):
                     results_list = []
@@ -918,7 +917,7 @@ def page_hasil_csv():
             return 'background-color:rgba(79,172,254,0.15);color:#93c5fd;font-weight:600'
         return ''
 
-    st.dataframe(df_display, use_container_width=True, hide_index=True, height=420)
+    dark_table(df_display)
 
     st.markdown("---")
     st.markdown("### 📊 Ringkasan Statistik")
@@ -931,8 +930,7 @@ def page_hasil_csv():
                  ("IPK Tertinggi", f"{df_res['IPK'].max():.2f}"),
                  ("IPK Terendah",  f"{df_res['IPK'].min():.2f}"),
                  ("IPK Std Deviasi", f"{df_res['IPK'].std():.2f}")]
-        st.dataframe(pd.DataFrame(stats, columns=["Metrik","Nilai"]),
-                     use_container_width=True, hide_index=True)
+        dark_table(pd.DataFrame(stats, columns=["Metrik","Nilai"]))
     with cd:
         cats_stats = [
             ("Avg IPK — Lulus Tepat Waktu",   f"{ipk_lulus:.2f}"),
