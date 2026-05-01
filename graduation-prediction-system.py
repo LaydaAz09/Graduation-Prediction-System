@@ -592,8 +592,7 @@ def page_hasil_personal():
                 ("Status Pekerjaan", r['status']), ("Umur", f"{r['umur']} tahun"),
                 ("IPK", f"{ipk:.2f}")] + \
                [(f"IPS Semester {i+1}", f"{v:.2f}") for i, v in enumerate(r['ips_vals'])]
-        st.dataframe(pd.DataFrame(rows, columns=["Variabel","Nilai"]),
-                     use_container_width=True, hide_index=True)
+        dark_table(pd.DataFrame(stats, columns=["Metrik","Nilai"]))
     
 
 def page_analisis_personal(model, model_ok):
@@ -928,8 +927,7 @@ def page_hasil_csv():
             ("IPK 2.0–2.99 (Cukup)",          f"{((df_res['IPK']>=2.0)&(df_res['IPK']<3.0)).sum()} mahasiswa"),
             ("IPK < 2.0 (Risiko)",            f"{(df_res['IPK']<2.0).sum()} mahasiswa"),
         ]
-        st.dataframe(pd.DataFrame(cats_stats, columns=["Metrik","Nilai"]),
-                     use_container_width=True, hide_index=True)
+        dark_table(pd.DataFrame(cats_stats, columns=["Metrik","Nilai"]))
 
     st.markdown("<br>", unsafe_allow_html=True)
     csv_out = df_display.to_csv(index=False).encode('utf-8')
