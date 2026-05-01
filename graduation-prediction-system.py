@@ -520,16 +520,7 @@ def page_hasil_personal():
                [(f"IPS Semester {i+1}", f"{v:.2f}") for i, v in enumerate(r['ips_vals'])]
         st.dataframe(pd.DataFrame(rows, columns=["Variabel","Nilai"]),
                      use_container_width=True, hide_index=True)
-    with cb:
-        st.markdown("### 🌲 Interpretasi Model")
-        if pred == 1:
-            st.success(f"**Random Forest: {conf:.1f}% → Lulus Tepat Waktu**\n\n"
-                       "Pola data mendukung prediksi lulus tepat waktu. Pertahankan prestasi!")
-        else:
-            st.warning(f"**Random Forest: {conf:.1f}% → Tidak Tepat Waktu**\n\n"
-                       "Model mendeteksi faktor risiko. Cek menu **🔍 Analisis** dan **💡 Rekomendasi**.")
     
-
 
 def page_analisis_personal(model, model_ok):
     if not st.session_state.prediction_done:
