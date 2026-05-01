@@ -567,27 +567,6 @@ def page_analisis_personal(model, model_ok):
         elif ips_std < 0.5: st.info(f"📊 Cukup Stabil (SD: {ips_std:.2f})")
         else:               st.warning(f"⚠️ Fluktuatif (SD: {ips_std:.2f})")
 
-    st.markdown("---")
-    st.markdown("### 🎯 Feature Importance")
-    if model_ok:
-        fi_df = pd.DataFrame({
-            'Faktor': ['Program Studi','Jenis Kelamin','Status Pekerjaan','Umur',
-                       'IPS Sem 1','IPS Sem 2','IPS Sem 3','IPS Sem 4','IPS Sem 5','IPS Sem 6'],
-            'Importance': model.feature_importances_})
-    else:
-        fi_df = pd.DataFrame({
-            'Faktor': ['IPS Sem 6','IPS Sem 5','IPS Sem 4','IPS Sem 3','IPS Sem 2',
-                       'IPS Sem 1','Umur','Program Studi','Status Pekerjaan','Jenis Kelamin'],
-            'Importance': [0.18,0.17,0.14,0.12,0.10,0.09,0.07,0.05,0.04,0.04]})
-    fi_df = fi_df.sort_values('Importance', ascending=False).head(3).sort_values('Importance', ascending=True)
-    fig_fi = go.Figure(go.Bar(
-        x=fi_df['Importance'], y=fi_df['Faktor'], orientation='h',
-        marker=dict(color=fi_df['Importance'], colorscale=[[0,'#c9bfef'],[1,'#7c3aed']], showscale=False),
-        text=[f"{v*100:.1f}%" for v in fi_df['Importance']], textposition='outside'))
-    fig_fi.update_layout(height=360, plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)',
-                         xaxis_title="Feature Importance", margin=dict(l=5,r=60,t=10,b=10))
-    st.plotly_chart(fig_fi, use_container_width=True)
-
 
 def page_rekomendasi_personal():
     if not st.session_state.prediction_done:
