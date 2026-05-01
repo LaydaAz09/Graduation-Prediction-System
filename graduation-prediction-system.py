@@ -234,6 +234,17 @@ st.markdown("""
     .about-card p, .about-card li { font-size:0.84rem; color:#c9bfef; line-height:1.65; }
     .formula-box { background: #0f0b20; border-radius: 0.6rem; padding: 0.8rem 1rem; font-size: 0.8rem; color: #a78bfa; line-height: 1.8; border: 1px solid rgba(139,92,246,0.3); margin-top: 0.5rem; font-family: monospace; }
     div[data-baseweb="select"] { border-radius: 0.6rem !important; }
+
+    /* ── EXPANDER TEXT PUTIH ── */
+    [data-testid="stExpander"] p,
+    [data-testid="stExpander"] span,
+    [data-testid="stExpander"] div,
+    [data-testid="stExpander"] li,
+    .streamlit-expanderContent p,
+    .streamlit-expanderContent span,
+    .streamlit-expanderContent div {
+        color: #ffffff !important;
+    }
             
     /* ── DARK BACKGROUND ── */
     .stApp { background-color: #0f0b20 !important; }
