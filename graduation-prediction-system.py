@@ -252,6 +252,39 @@ st.markdown("""
     .stMarkdown h1, .stMarkdown h2, .stMarkdown h3 {
         color: #ffffff !important;
     }
+    /* ── FORM LABELS & INPUT TEXT ── */
+    .stSelectbox label, .stNumberInput label, .stTextInput label,
+    [data-testid="stWidgetLabel"] p,
+    [data-testid="stWidgetLabel"] {
+        color: #c9bfef !important;
+    }
+    
+    /* ── INPUT / SELECT VALUE TEXT ── */
+    .stSelectbox [data-baseweb="select"] [data-testid="stMarkdownContainer"] p,
+    .stSelectbox div[data-baseweb="select"] span,
+    div[data-baseweb="select"] > div > div,
+    div[data-baseweb="select"] [data-testid="stMarkdownContainer"],
+    .stSelectbox div[class*="ValueContainer"] *,
+    .stSelectbox div[class*="singleValue"],
+    input[type="number"], input[type="text"] {
+        color: #e2d9f3 !important;
+    }
+
+    /* ── NUMBER INPUT ── */
+    .stNumberInput input {
+        color: #e2d9f3 !important;
+        background: #1a1235 !important;
+        border: 1.5px solid rgba(139,92,246,0.35) !important;
+        border-radius: 10px !important;
+    }
+
+    /* ── SELECT BOX CONTAINER ── */
+    div[data-baseweb="select"] > div {
+        background: #1a1235 !important;
+        border: 1.5px solid rgba(139,92,246,0.35) !important;
+        border-radius: 10px !important;
+        color: #e2d9f3 !important;
+    }
 </style>
 """, unsafe_allow_html=True)
 
