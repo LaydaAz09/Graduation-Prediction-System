@@ -244,6 +244,14 @@ st.markdown("""
     [data-testid="stFileUploader"] { background-color: #1a1235 !important; border: 1px solid rgba(139,92,246,0.3) !important; border-radius: 0.75rem !important; }
     [data-testid="stFileUploader"] * { color: #e2d9f3 !important; }
     [data-testid="stFileUploaderDropzone"] { background-color: #1a1235 !important; }
+
+    /* ── HEADING & TEKS UTAMA ── */
+    h1, h2, h3, h4, h5, h6 {
+        color: #ffffff !important;
+    }
+    .stMarkdown h1, .stMarkdown h2, .stMarkdown h3 {
+        color: #ffffff !important;
+    }
 </style>
 """, unsafe_allow_html=True)
 
@@ -979,21 +987,6 @@ def page_about(model_ok, accuracy, best_params):
             <p><b>✅ Lulus Tepat Waktu</b><br>Model memprediksi mahasiswa lulus sesuai target waktu studi.</p><br>
             <p><b>❌ Tidak Lulus Tepat Waktu</b><br>Model mendeteksi faktor risiko yang perlu ditangani.</p>
             </div>""", unsafe_allow_html=True)
-    with c4:
-        st.markdown("""<div class="about-card"><h3>📐 Parameter Grid</h3>
-            <div class="formula-box">Algorithm         : Random Forest
-Tuning            : GridSearchCV (5-Fold CV)
-Scoring           : f1_weighted
-n_estimators      : [100]
-max_depth         : [20]
-min_samples_split : [10]
-min_samples_leaf  : [4]
-class_weight      : balanced
-test_size         : 20%
-random_state      : 42</div>
-            <p style="margin-top:.75rem;"><b>10 Fitur:</b> Prodi · Gender · Status · Umur · IPS Sem 1–6</p>
-            </div>""", unsafe_allow_html=True)
-
 
 # ==========================================
 # SESSION STATE INIT
