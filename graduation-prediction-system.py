@@ -274,6 +274,29 @@ st.markdown("""
         .stNumberInput > label {
             color: #ffffff !important;
         }
+        /* ── EXPANDER HEADER GELAP ── */
+    [data-testid="stExpander"] summary,
+    [data-testid="stExpander"] details > summary,
+    div[data-testid="stExpander"] > details > summary {
+        background-color: #1a1235 !important;
+        border: 1px solid rgba(139,92,246,0.3) !important;
+        border-radius: 10px !important;
+        color: #e2d9f3 !important;
+    }
+    [data-testid="stExpander"] summary p,
+    [data-testid="stExpander"] summary span,
+    [data-testid="stExpander"] summary svg {
+        color: #e2d9f3 !important;
+        fill: #a78bfa !important;
+    }
+
+    /* ── EXPANDER CONTAINER GELAP ── */
+    [data-testid="stExpander"],
+    [data-testid="stExpander"] details {
+        background-color: #1a1235 !important;
+        border: 1px solid rgba(139,92,246,0.2) !important;
+        border-radius: 10px !important;
+    }
 </style>
 """, unsafe_allow_html=True)
 
