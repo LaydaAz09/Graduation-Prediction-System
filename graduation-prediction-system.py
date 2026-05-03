@@ -588,10 +588,6 @@ def page_hasil_personal():
                 f'</div></div>',
                 unsafe_allow_html=True
             )
-                f'<div class="res-stats">'
-                f'<div style="text-align:center;"><div class="res-stat-val">{ipk:.2f}</div><div class="res-stat-label">IPK</div></div>'
-                f'<div style="text-align:center;"><div class="res-stat-val">{ips_trend:+.2f}</div><div class="res-stat-label">Tren IPS</div></div>'
-                f'</div></div>', unsafe_allow_html=True)
 
     st.markdown("<br>", unsafe_allow_html=True)
     for col, icon, val, lbl in zip(st.columns(3), ["📊","📈","📉"],
