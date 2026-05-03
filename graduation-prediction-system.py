@@ -49,6 +49,23 @@ st.markdown("""
         visibility: hidden !important;
         display: none !important;
     }
+    /* ── TAMPILKAN HAMBURGER DI MOBILE ── */
+    @media (max-width: 768px) {
+        header[data-testid="stHeader"] {
+            height: auto !important;
+            min-height: 3rem !important;
+            max-height: 3rem !important;
+            visibility: visible !important;
+            display: flex !important;
+            background: #0f0b20 !important;
+            border-bottom: 1px solid rgba(139,92,246,0.2) !important;
+        }
+        [data-testid="stHeader"] button,
+        [data-testid="stHeader"] svg {
+            color: #a78bfa !important;
+            fill: #a78bfa !important;
+        }
+    }
     .block-container {
         padding-top: 1rem !important;
         padding-bottom: 1rem !important;
