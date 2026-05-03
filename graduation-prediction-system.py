@@ -631,8 +631,22 @@ def dark_table(df):
     
 def render_header(accuracy, total_data, model_ok, best_params):
     st.markdown("""
-    <div class="grad-header">
-        <h1>🎓 GRADUATION PREDICTION SYSTEM USING MACHINE LEARNING</h1>
+    <div class="grad-header" style="display:flex;align-items:center;gap:2rem;padding:1.8rem 2.2rem;">
+        <div style="font-size:5rem;flex-shrink:0;line-height:1;">🎓</div>
+        <div style="position:relative;">
+            <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.15em;
+                        color:rgba(255,255,255,0.65);margin-bottom:0.4rem;font-weight:600;">
+                BINUS University · Data Science
+            </div>
+            <div style="font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:800;
+                        color:white;line-height:1.2;margin-bottom:0.3rem;">
+                Graduation Prediction System
+            </div>
+            <div style="font-size:0.85rem;color:rgba(255,255,255,0.75);font-weight:400;">
+                Machine Learning · Random Forest · Prediksi Kelulusan Mahasiswa
+            </div>
+        </div>
+    </div>
     """, unsafe_allow_html=True)
 
 
