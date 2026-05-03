@@ -345,6 +345,26 @@ st.markdown("""
         fill: #a78bfa !important;
         stroke: #a78bfa !important;
     }
+    /* ── FILE UPLOADER AFTER UPLOAD ── */
+    [data-testid="stFileUploader"] [data-testid="stFileUploaderFile"],
+    [data-testid="stFileUploader"] [class*="uploadedFile"],
+    [data-testid="stFileUploader"] section,
+    [data-testid="stFileUploader"] > div > div {
+        background-color: #1a1235 !important;
+        border: 1px solid rgba(139,92,246,0.3) !important;
+        border-radius: 10px !important;
+        color: #e2d9f3 !important;
+    }
+    [data-testid="stFileUploader"] [data-testid="stFileUploaderFile"] span,
+    [data-testid="stFileUploader"] [data-testid="stFileUploaderFile"] p,
+    [data-testid="stFileUploader"] [data-testid="stFileUploaderFile"] small {
+        color: #e2d9f3 !important;
+    }
+    [data-testid="stFileUploader"] [data-testid="stFileUploaderDeleteBtn"] button {
+        background-color: transparent !important;
+        border: none !important;
+        color: #a78bfa !important;
+    }
 </style>
 """, unsafe_allow_html=True)
 
