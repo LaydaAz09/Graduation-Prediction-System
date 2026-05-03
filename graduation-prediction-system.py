@@ -326,6 +326,25 @@ st.markdown("""
         border: 1px solid rgba(139,92,246,0.35) !important;
         border-radius: 8px !important;
     }
+    /* ── FILE UPLOADER BUTTON ── */
+    [data-testid="stFileUploader"] button,
+    [data-testid="stFileUploader"] button:hover,
+    [data-testid="stFileUploader"] button:focus,
+    button[kind="secondary"],
+    .stFileUploader button {
+        background-color: #1a1235 !important;
+        color: #a78bfa !important;
+        border: 1px solid rgba(139,92,246,0.35) !important;
+        border-radius: 8px !important;
+    }
+    [data-testid="stFileUploader"] button span,
+    [data-testid="stFileUploader"] button p {
+        color: #a78bfa !important;
+    }
+    [data-testid="stFileUploader"] svg {
+        fill: #a78bfa !important;
+        stroke: #a78bfa !important;
+    }
 </style>
 """, unsafe_allow_html=True)
 
