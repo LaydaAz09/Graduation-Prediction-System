@@ -1038,8 +1038,8 @@ def page_visualisasi_csv():
 def page_about(model_ok, accuracy, best_params):
     st.markdown("## ℹ️ Tentang Sistem")
     c1, c2 = st.columns(2)
-    with c1:
-        st.markdown("""<div class="about-card" style="min-height:280px;height:100%;box-sizing:border-box;">
+   with c1:
+        st.markdown("""<div class="about-card" style="min-height:370px;height:100%;box-sizing:border-box;">
             <h3>🎯 Tujuan Sistem</h3>
             <p>Sistem prediksi berbasis machine learning untuk menganalisis peluang mahasiswa lulus tepat waktu menggunakan Random Forest + GridSearchCV.</p>
             <ul style="margin-top:.75rem;padding-left:1rem;">
@@ -1048,7 +1048,7 @@ def page_about(model_ok, accuracy, best_params):
                 <li>Analisis massal via Upload CSV</li>
             </ul></div>""", unsafe_allow_html=True)
     with c2:
-        st.markdown("""<div class="about-card" style="min-height:280px;height:100%;box-sizing:border-box;">
+        st.markdown("""<div class="about-card" style="min-height:370px;height:100%;box-sizing:border-box;">
             <h3>🧠 Cara Kerja</h3>
             <p><b>Step 1</b> — Input data pribadi & IPS Semester 1–6</p>
             <p><b>Step 2</b> — Label Encoding variabel kategorikal</p>
