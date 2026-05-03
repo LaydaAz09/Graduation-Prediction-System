@@ -733,6 +733,7 @@ def page_visualisasi_personal():
                               text=["3.00","3.50","2.75"], textposition='outside'))
     fig_cmp.update_layout(barmode='group', height=400, yaxis=dict(range=[0,4.8]),
                           plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)',
+                          font=dict(color='#ffffff'),
                           legend=dict(orientation="h",yanchor="bottom",y=1.02,xanchor="right",x=1),
                           margin=dict(l=10,r=10,t=30,b=10))
     st.plotly_chart(fig_cmp, use_container_width=True)
