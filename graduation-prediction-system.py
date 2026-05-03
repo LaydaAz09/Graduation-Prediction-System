@@ -433,6 +433,12 @@ st.markdown("""
         color: #a78bfa !important;
         border-radius: 8px !important;
     }
+    /* ── BUTTON TEXT PUTIH ── */
+    .stButton > button,
+    .stButton > button p,
+    .stButton > button span {
+        color: #ffffff !important;
+    }
 </style>
 """, unsafe_allow_html=True)
 
