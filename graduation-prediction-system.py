@@ -403,6 +403,35 @@ st.markdown("""
         padding: 0.6rem 1rem !important;
         min-height: unset !important;
     }
+    /* ── NUCLEAR OPTION FILE UPLOADER ── */
+    [data-testid="stFileUploader"] > div {
+        border: none !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        outline: none !important;
+    }
+    [data-testid="stFileUploader"] > div > div {
+        border: none !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    [data-testid="stFileUploader"] > div > div > div {
+        border: none !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    [data-testid="stFileUploaderDropzone"] {
+        border: 1px solid rgba(139,92,246,0.3) !important;
+        background-color: #1a1235 !important;
+        border-radius: 0.75rem !important;
+        padding: 0.5rem 1rem !important;
+    }
 </style>
 """, unsafe_allow_html=True)
 
