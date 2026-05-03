@@ -387,6 +387,22 @@ st.markdown("""
         border: none !important;
         color: #a78bfa !important;
     }
+    /* ── HAPUS WRAPPER LUAR FILE UPLOADER ── */
+    [data-testid="stFileUploader"] > div:first-child,
+    [data-testid="stFileUploader"] > div:first-child > div {
+        border: none !important;
+        background: transparent !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        margin: 0 !important;
+    }
+    [data-testid="stFileUploaderDropzone"] {
+        background-color: #1a1235 !important;
+        border: 1px solid rgba(139,92,246,0.3) !important;
+        border-radius: 0.75rem !important;
+        padding: 0.6rem 1rem !important;
+        min-height: unset !important;
+    }
 </style>
 """, unsafe_allow_html=True)
 
