@@ -740,7 +740,7 @@ def page_visualisasi_personal():
     cr, ci = st.columns([2,1])
     with cr:
         st.markdown("### 🎯 Radar Profil Mahasiswa")
-        cats_r = ['IPK','Tren IPS','Konsistensi','Confidence','IPS Terakhir']
+        cats_r = ['IPK','Tren IPS','Konsistensi','IPS Terakhir']
         vals_r = [(ipk/4)*100, min(100,max(0,((ips_trend+1)/2)*100)),
                   max(0,(1-ips_std/0.5))*100, conf, (ips_vals[5]/4)*100]
         fig_r = go.Figure(go.Scatterpolar(
@@ -766,7 +766,6 @@ def page_visualisasi_personal():
         ("IPS Terendah",  f"{min(ips_vals):.2f}", "✅ Aman" if min(ips_vals)>=2.0 else "⚠️ Rendah"),
         ("Tren Sem6–Sem1",f"{ips_trend:+.2f}", "📈 Naik" if ips_trend>0 else "📉 Turun"),
         ("Konsistensi (SD)", f"{ips_std:.2f}", "🎯 Stabil" if ips_std<0.3 else ("📊 Cukup" if ips_std<0.5 else "⚠️ Fluktuatif")),
-        ("Confidence", f"{conf:.1f}%", "✅ Tinggi" if conf>=80 else ("📊 Sedang" if conf>=60 else "⚠️ Rendah")),
     ]
     dark_table(pd.DataFrame(summary, columns=["Aspek","Nilai","Status"]))
 
