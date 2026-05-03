@@ -581,18 +581,17 @@ def page_hasil_personal():
     st.markdown(f'<div class="{cls}">'
                 f'<div style="font-size:3rem;position:relative;">{emoji}</div>'
                 f'<div class="res-title">{title}</div>'
-                f'<p style="color:rgba(255,255,255,0.82);margin:.4rem 0 0;position:relative;">Prediksi Random Forest · Confidence {conf:.1f}%</p>'
+                f'<p style="color:rgba(255,255,255,0.82);margin:.4rem 0 0;position:relative;">Prediksi Random Forest</p>'
                 f'<div class="res-stats">'
                 f'<div style="text-align:center;"><div class="res-stat-val">{ipk:.2f}</div><div class="res-stat-label">IPK</div></div>'
                 f'<div style="text-align:center;"><div class="res-stat-val">{ips_trend:+.2f}</div><div class="res-stat-label">Tren IPS</div></div>'
-                f'<div style="text-align:center;"><div class="res-stat-val">{conf:.1f}%</div><div class="res-stat-label">Confidence</div></div>'
                 f'</div></div>', unsafe_allow_html=True)
 
     st.markdown("<br>", unsafe_allow_html=True)
-    for col, icon, val, lbl in zip(st.columns(4), ["📊","📈","📉","🎯"],
+    for col, icon, val, lbl in zip(st.columns(3), ["📊","📈","📉"],
                                    [f"{ipk:.2f}", f"{max(r['ips_vals']):.2f}",
-                                    f"{min(r['ips_vals']):.2f}", f"{conf:.1f}%"],
-                                   ["IPK","IPS Tertinggi","IPS Terendah","Confidence"]):
+                                    f"{min(r['ips_vals']):.2f}"],
+                                   ["IPK","IPS Tertinggi","IPS Terendah"]):
         with col:
             st.markdown(f'<div class="mbox"><div class="mbox-icon">{icon}</div>'
                         f'<div class="mbox-val">{val}</div><div class="mbox-lbl">{lbl}</div></div>',
