@@ -578,16 +578,16 @@ def page_hasil_personal():
     emoji = "✅" if pred == 1 else "❌"
     title = "LULUS TEPAT WAKTU" if pred == 1 else "TIDAK LULUS TEPAT WAKTU"
 
-    st.markdown(f'<div class="{cls}">'
-                f'<div style="font-size:3rem;position:relative;">{emoji}</div>'
-                f'<div class="res-title">{title}</div>'
-                 st.markdown(f'<div class="{cls}">'
+            st.markdown(
+                f'<div class="{cls}">'
                 f'<div style="font-size:3rem;position:relative;">{emoji}</div>'
                 f'<div class="res-title">{title}</div>'
                 f'<div class="res-stats">'
                 f'<div style="text-align:center;"><div class="res-stat-val">{ipk:.2f}</div><div class="res-stat-label">IPK</div></div>'
                 f'<div style="text-align:center;"><div class="res-stat-val">{ips_trend:+.2f}</div><div class="res-stat-label">Tren IPS</div></div>'
-                f'</div></div>', unsafe_allow_html=True)
+                f'</div></div>',
+                unsafe_allow_html=True
+            )
                 f'<div class="res-stats">'
                 f'<div style="text-align:center;"><div class="res-stat-val">{ipk:.2f}</div><div class="res-stat-label">IPK</div></div>'
                 f'<div style="text-align:center;"><div class="res-stat-val">{ips_trend:+.2f}</div><div class="res-stat-label">Tren IPS</div></div>'
