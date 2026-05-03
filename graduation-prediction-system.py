@@ -889,7 +889,7 @@ def page_upload_csv(model, scaler, le_prodi, le_gender, le_status, model_ok):
     st.info("**Format CSV**\n"
             "(`nama`, `prodi`, `jenis_kelamin`, `status_pegawai`, `ips_1`–`ips_6`, `IPK`, `umur`)")
 
-    st.markdown("**Upload file CSV mahasiswa**")
+    st.markdown("<p style='color:#ffffff;font-size:1rem;font-weight:600;margin-top:1rem;margin-bottom:0.3rem;'>Upload file CSV mahasiswa</p>", unsafe_allow_html=True)
     uploaded = st.file_uploader("x", type=["csv"], label_visibility="hidden")
     if uploaded is not None:
         try:
