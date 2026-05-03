@@ -318,6 +318,14 @@ st.markdown("""
     [data-testid="stDataFrame"] tr:hover td {
         background-color: rgba(139,92,246,0.12) !important;
     }
+    /* ── FILE UPLOADER BUTTON ── */
+    [data-testid="stFileUploaderDropzoneInput"] + div button,
+    [data-testid="baseButton-secondary"] {
+        background-color: #1a1235 !important;
+        color: #a78bfa !important;
+        border: 1px solid rgba(139,92,246,0.35) !important;
+        border-radius: 8px !important;
+    }
 </style>
 """, unsafe_allow_html=True)
 
