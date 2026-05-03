@@ -422,7 +422,7 @@ st.markdown("""
     [data-testid="stFileUploaderDropzone"] > div {
         display: flex !important;
         align-items: center !important;
-        justify-content: center !important;
+        justify-content: flex-start !important;
         gap: 1rem !important;
         width: 100% !important;
     }
