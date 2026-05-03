@@ -252,9 +252,31 @@ st.markdown("""
     [data-testid="stMain"] { background-color: #0f0b20 !important; }
     .main { background-color: #0f0b20 !important; }
     section.main > div { background-color: #0f0b20 !important; }
-    [data-testid="stFileUploader"] { background-color: #1a1235 !important; border: 1px solid rgba(139,92,246,0.3) !important; border-radius: 0.75rem !important; }
-    [data-testid="stFileUploader"] * { color: #e2d9f3 !important; }
-    [data-testid="stFileUploaderDropzone"] { background-color: #1a1235 !important; }
+    [data-testid="stFileUploader"],
+    [data-testid="stFileUploader"] > div,
+    [data-testid="stFileUploader"] > div > div,
+    [data-testid="stFileUploader"] > div > div > div,
+    [data-testid="stFileUploaderDropzone"],
+    [data-testid="stFileUploaderDropzone"] > div,
+    [data-testid="stFileUploader"] section,
+    [data-testid="stFileUploader"] section > div,
+    [data-testid="stFileUploader"] li,
+    [data-testid="stFileUploader"] ul {
+        background-color: #1a1235 !important;
+        border-color: rgba(139,92,246,0.3) !important;
+        border-radius: 0.75rem !important;
+        color: #e2d9f3 !important;
+    }
+    [data-testid="stFileUploader"] * {
+        color: #e2d9f3 !important;
+        background-color: transparent !important;
+    }
+    [data-testid="stFileUploader"] button {
+        background-color: #0f0b20 !important;
+        border: 1px solid rgba(139,92,246,0.35) !important;
+        color: #a78bfa !important;
+        border-radius: 8px !important;
+    }
 
     /* ── HEADING & TEKS UTAMA ── */
     h1, h2, h3, h4, h5, h6 {
