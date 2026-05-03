@@ -756,7 +756,6 @@ def page_visualisasi_personal():
                 "- **IPK** — Prestasi keseluruhan\n"
                 "- **Tren IPS** — Perkembangan nilai\n"
                 "- **Konsistensi** — Kestabilan nilai\n"
-                "- **Confidence** — Keyakinan model RF\n"
                 "- **IPS Terakhir** — Performa Sem 6")
 
     st.markdown("---")
