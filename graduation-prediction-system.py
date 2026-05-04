@@ -42,9 +42,16 @@ st.markdown("""
     html, body, [class*="css"] { font-family: 'DM Sans', sans-serif; }
 
     /* ── FIX GAP UTAMA ── */
-       .block-container {
-        padding-top: 5rem !important;
-        padding-bottom: 1rem !important;
+           .block-container {
+        padding-top: 3rem !important;
+    }
+    
+    [data-testid="stAppViewContainer"] > .main {
+        padding-top: 2rem !important;
+    }
+    
+    .grad-header {
+        margin-top: 1.5rem !important;
     }
        [data-testid="stAppViewContainer"] > .main {
         padding-top: 3.5rem !important;
@@ -72,13 +79,6 @@ st.markdown("""
         visibility: visible !important;
     }
 }
-    .block-container {
-        padding-top: 1rem !important;
-        padding-bottom: 1rem !important;
-    }
-    [data-testid="stAppViewContainer"] > .main {
-        padding-top: 0 !important;
-    }
 
     /* ── FIX SIDEBAR GAP ── */
     [data-testid="stSidebarContent"] {
