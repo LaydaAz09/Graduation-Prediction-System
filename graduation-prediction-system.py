@@ -152,9 +152,9 @@ st.markdown("""
         display: block !important;
         visibility: visible !important;
         opacity: 1 !important;
-        transform: none !important;
-        left: 0 !important;
-        width: 21rem !important;
+        transform: translateX(0) !important;
+        min-width: 244px !important;
+        max-width: 244px !important;
     }
 
     /* ── HEADER ── */
