@@ -42,13 +42,13 @@ st.markdown("""
     html, body, [class*="css"] { font-family: 'DM Sans', sans-serif; }
 
     /* ── FIX GAP UTAMA ── */
-    header[data-testid="stHeader"] {
-        height: 0 !important;
-        min-height: 0 !important;
-        max-height: 0 !important;
-        visibility: hidden !important;
-        display: none !important;
-    }
+        header[data-testid="stHeader"] {
+            background: transparent !important;
+            border-bottom: none !important;
+        }
+        header[data-testid="stHeader"] > * {
+            visibility: hidden !important;
+        }
     /* ── TAMPILKAN HAMBURGER DI MOBILE ── */
     @media (max-width: 768px) {
         header[data-testid="stHeader"] {
@@ -66,6 +66,12 @@ st.markdown("""
             fill: #a78bfa !important;
         }
     }
+    @media (min-width: 769px) {
+    section[data-testid="stSidebar"] {
+        display: flex !important;
+        visibility: visible !important;
+    }
+}
     .block-container {
         padding-top: 1rem !important;
         padding-bottom: 1rem !important;
@@ -75,17 +81,9 @@ st.markdown("""
     }
 
     /* ── FIX SIDEBAR GAP ── */
-    section[data-testid="stSidebar"],
-    section[data-testid="stSidebar"] > div,
-    section[data-testid="stSidebar"] > div:first-child,
-    section[data-testid="stSidebar"] > div > div:first-child {
-        top: 0 !important;
-        margin-top: 0 !important;
-        padding-top: 0 !important;
-    }
-    section[data-testid="stSidebar"] {
-        height: 100vh !important;
-    }
+    [data-testid="stSidebarContent"] {
+    padding: 0.8rem 1.1rem 1.4rem 1.1rem !important;
+}
     [data-testid="stSidebarContent"] {
         padding: 0.8rem 1.1rem 1.4rem 1.1rem !important;
         margin-top: 0 !important;
