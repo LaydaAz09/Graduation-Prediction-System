@@ -981,7 +981,6 @@ def page_upload_csv(model, scaler, le_prodi, le_gender, le_status, model_ok):
                             'Nama':       nv,
                             'IPK':        round(r['ipk'], 2),
                             'Kategori':   "✅ Lulus Tepat Waktu" if r['pred']==1 else "❌ Tidak Lulus Tepat Waktu",
-                            'Confidence': f"{r['confidence']:.1f}%",
                             'Tren IPS':   f"{r['ips_trend']:+.2f}",
                         })
                         prog.progress((i+1)/len(df_up))
