@@ -46,8 +46,8 @@ st.markdown("""
         padding-top: 5rem !important;
         padding-bottom: 1rem !important;
     }
-    [data-testid="stAppViewContainer"] > .main {
-        padding-top: 2rem !important;
+       [data-testid="stAppViewContainer"] > .main {
+        padding-top: 3.5rem !important;
     }
     /* ── TAMPILKAN HAMBURGER DI MOBILE ── */
     @media (max-width: 768px) {
