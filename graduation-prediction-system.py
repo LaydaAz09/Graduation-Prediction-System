@@ -147,6 +147,15 @@ st.markdown("""
         color: #b8aee0 !important;
         font-size: 0.84rem !important;
     }
+    /* ── FORCE SIDEBAR VISIBLE DESKTOP ── */
+    section[data-testid="stSidebar"] {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        transform: none !important;
+        left: 0 !important;
+        width: 21rem !important;
+    }
 
     /* ── HEADER ── */
     .grad-header {
