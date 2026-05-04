@@ -43,12 +43,10 @@ st.markdown("""
 
     /* ── FIX GAP UTAMA ── */
         header[data-testid="stHeader"] {
-            background: transparent !important;
-            border-bottom: none !important;
-        }
-        header[data-testid="stHeader"] > * {
-            visibility: hidden !important;
-        }
+    background: #0f0b20 !important;
+    border-bottom: 1px solid rgba(139,92,246,0.15) !important;
+    height: 3rem !important;
+}
     /* ── TAMPILKAN HAMBURGER DI MOBILE ── */
     @media (max-width: 768px) {
         header[data-testid="stHeader"] {
