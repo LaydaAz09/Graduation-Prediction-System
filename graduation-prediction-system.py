@@ -42,11 +42,10 @@ st.markdown("""
     html, body, [class*="css"] { font-family: 'DM Sans', sans-serif; }
 
     /* ── FIX GAP UTAMA ── */
-        header[data-testid="stHeader"] {
-    background: #0f0b20 !important;
-    border-bottom: 1px solid rgba(139,92,246,0.15) !important;
-    height: 3rem !important;
-}
+     .block-container {
+        padding-top: 4rem !important;
+        padding-bottom: 1rem !important;
+    }
     /* ── TAMPILKAN HAMBURGER DI MOBILE ── */
     @media (max-width: 768px) {
         header[data-testid="stHeader"] {
