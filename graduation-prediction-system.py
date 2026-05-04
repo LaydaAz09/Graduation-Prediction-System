@@ -42,9 +42,12 @@ st.markdown("""
     html, body, [class*="css"] { font-family: 'DM Sans', sans-serif; }
 
     /* ── FIX GAP UTAMA ── */
-     .block-container {
-        padding-top: 4rem !important;
+       .block-container {
+        padding-top: 5rem !important;
         padding-bottom: 1rem !important;
+    }
+    [data-testid="stAppViewContainer"] > .main {
+        padding-top: 2rem !important;
     }
     /* ── TAMPILKAN HAMBURGER DI MOBILE ── */
     @media (max-width: 768px) {
