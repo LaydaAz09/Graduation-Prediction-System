@@ -470,6 +470,16 @@ st.markdown("""
     [data-testid="stDecoration"] {
         background: #0f0b20 !important;
     }
+        /* ── ICON & TEXT HEADER JADI PUTIH ── */
+    header[data-testid="stHeader"] button,
+    header[data-testid="stHeader"] button svg,
+    header[data-testid="stHeader"] a,
+    header[data-testid="stHeader"] p,
+    header[data-testid="stHeader"] span,
+    header[data-testid="stHeader"] div {
+        color: white !important;
+        fill: white !important;
+    }
 </style>
 """, unsafe_allow_html=True)
 
