@@ -454,6 +454,22 @@ st.markdown("""
     .stButton > button span {
         color: #ffffff !important;
     }
+        /* ── HEADER ATAS SAMAKAN DENGAN BACKGROUND ── */
+    header[data-testid="stHeader"] {
+        background-color: #0f0b20 !important;
+    }
+    
+    .stAppHeader {
+        background-color: #0f0b20 !important;
+    }
+    
+    [data-testid="stToolbar"] {
+        background-color: #0f0b20 !important;
+    }
+    
+    [data-testid="stDecoration"] {
+        background: #0f0b20 !important;
+    }
 </style>
 """, unsafe_allow_html=True)
 
